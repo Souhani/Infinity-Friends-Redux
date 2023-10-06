@@ -1,43 +1,55 @@
 import CreateCard from "../components/CreateCard";
 import SearchBox from "../components/SearchBox";
 import { useState, useEffect } from "react";
+import { connect } from 'react-redux';
 import Card from "../components/Card";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css";
+import { searching, requestRobots, addingName, addingNickname } from "../actions";
 
 
-   
-const App = () => {
+const mapStateToProps = (state) => {
+   return {
+      searchField: state.searcheRobots.searchField,
+      isPending: state.requestRobots.isPending,
+      requestedRobots: state.requestRobots.requestedRobots,
+      error: state.requestRobots.error,
+      name: state.createRobots.name,
+      nickname: state.createRobots.nickname
+   }
+};
+
+const mapDispatchToProps = (dispatch) => {
+   return {
+      onSearchFieldChange: event => dispatch(searching(event.target.value)),
+      onRequestRobots: () => dispatch(requestRobots()),
+      onNameFieldChange: event => dispatch(addingName(event.target.value)),
+      onNicknameFieldChange: event => dispatch(addingNickname(event.target.value))
+   }
+}
+const App = (props) => {
+
+  let { onSearchFieldChange, searchField,
+        onRequestRobots, isPending, requestedRobots, error,
+        onNameFieldChange, name,
+        onNicknameFieldChange, nickname
+     } = props;
 /// in here we fitch robots data( name, ...)
  useEffect(() => {
-      fetch("https://dummyjson.com/users")
-      .then(res => res.json())
-      .then(res => {setCards(res.users);})
-      .catch(err => console.log(err,'fetching error'));
+   onRequestRobots()
     }, []);
 
  //states that we use.
    const [cards, setCards] = useState([]);
-   const [name, setName] = useState('');
-   const [nickname, setNickname] = useState('');
    const [index, setIndex] = useState(0);
    const [create, setCreate] = useState(false);
-   const [searchfield, setSearchfield] = useState(''); 
+
   
 ///functions used to create cards:
             // handle the create robot button
             const handlCreatClick = () => {
                setCreate(true);
-            }
-            //get the robot Name
-            const handleNameChange = (event) => {
-            setName(event.target.value);
-            };
-            
-            //get the robot Nickname
-            const handleNicknameChange = (event) => {
-            setNickname(event.target.value);
             };
             
             //button the user clicks to create a robot
@@ -45,8 +57,8 @@ const App = () => {
              if(name.length!==0 && nickname.length!==0){
                let newCard = { id:cards.length+1, firstName: name, lastName: nickname}
                setCards([newCard,...cards]  );
-               setName(''); // Clear the name input field when the user done
-               setNickname(''); // Clear the Nickname input field also
+                // Clear the name input field when the user done
+               // Clear the Nickname input field also
                setIndex(index+1);
                }
                };
@@ -69,16 +81,13 @@ const App = () => {
             }
 
 ///search for a robot
-   const onSearchChange = (event) => {
-      setSearchfield(event.target.value)
-   };
-   const filteredRobots = cards.filter(robot => {
-      return robot.firstName.toLowerCase().includes(searchfield.toLowerCase()) || robot.lastName.toLowerCase().includes(searchfield.toLowerCase())
+   const robots = [...requestedRobots, ...cards]
+   const filteredRobots = robots.filter(robot => {
+      return robot.firstName.toLowerCase().includes(searchField.toLowerCase()) || robot.lastName.toLowerCase().includes(searchField.toLowerCase())
    });
-
 /// if there is no robots
-   const isCards = (cards) => {
-      if(!cards.length){
+   const isCards = (robots) => {
+      if(!robots.length){
          return (<h1>No Robots</h1>)
       }else{ 
          return <Card filteredRobots={filteredRobots} handleDeleteCard={handleDeleteCard}/>
@@ -89,8 +98,8 @@ const App = () => {
    if(create){
       return(      
        <CreateCard 
-                   handleNameChange={handleNameChange} 
-                   handleNicknameChange={handleNicknameChange} 
+                   onNameFieldChange={onNameFieldChange} 
+                   onNicknameFieldChange={onNicknameFieldChange} 
                    handlAddCards={handlAddCards} index={index} 
                    handleGoBack={handleGoBack}
                    />        
@@ -100,7 +109,7 @@ const App = () => {
       return (
          <div>
          <h1>Infinity Robots</h1>
-         <SearchBox onSearchChange={onSearchChange}/>
+         <SearchBox onSearchFieldChange={ onSearchFieldChange }/>
          <button className="b ph2 grow bg-gold pv1  br4 ba b--yellow pointer f6 "
                  onClick={ handleDeleteAll }
                  style={{position: 'absolute', top:'2%', right:'2%'}}>
@@ -113,7 +122,7 @@ const App = () => {
          <Scroll>
             <ErrorBoundry>
                { 
-                  isCards(cards)
+                  isCards(robots)
 
                }
              
@@ -123,4 +132,4 @@ const App = () => {
         )
    }; 
 };
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps) (App);
