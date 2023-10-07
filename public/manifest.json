@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Infinity Robots",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "linear-gradient(to right, #008080,#00449E)",
-  "background_color": "linear-gradient(to right, #008080,#00449E)"
+  "theme_color": "#00449E",
+  "background_color": "#008080"
 }
