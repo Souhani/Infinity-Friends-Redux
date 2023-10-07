@@ -16,7 +16,7 @@ const Card = ({filteredRobots, handleDeleteCard}) => {
                                 </button>
                                 <img 
                                      alt='robot'
-                                     src= {`https://robohash.org/${card.firstName+card.id+card.lastName}?200x200`} width='200px' height='auto' />
+                                     src= {`https://robohash.org/${card.firstName+card.id+card.lastName}?size=150x150`} />
                                 <div className='grow navy '
                                      style={{cursor: "pointer"}}>
                                     <h2>{card.firstName}</h2>
