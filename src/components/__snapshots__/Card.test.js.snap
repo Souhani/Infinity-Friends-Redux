@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing card 1`] = `
+<div>
+  <div
+    className="bg-light-yellow  tc br3 dib shadow-2 dib pa3 bw2 ma2"
+    key="1"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <button
+      className="b ph2  grow link  bg-gold pv1  br4 ba b--yellow pointer f6 "
+      onClick={[Function]}
+      style={
+        Object {
+          "position": "absolute",
+          "right": "1%",
+          "top": "1%",
+        }
+      }
+    >
+      Delete
+    </button>
+    <img
+      alt="robot"
+      src="https://robohash.org/jhon1snow?set=undefined&size=100x100"
+    />
+    <div
+      className="grow navy "
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      <h2>
+        jhon
+      </h2>
+      <h4>
+        snow
+      </h4>
+    </div>
+  </div>
+</div>
+`;

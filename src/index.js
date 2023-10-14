@@ -9,9 +9,9 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import ThunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import { searcheRobots, requestRobots, createRobots } from './reducers';
+import { searcheRobots, requestRobots, createRobots, createRobotPage, allRobots, selectAvatars } from './reducers';
 
-const rootReducer = combineReducers({ searcheRobots, requestRobots, createRobots })
+const rootReducer = combineReducers({ searcheRobots, requestRobots, createRobots, createRobotPage, allRobots, selectAvatars })
 const logger = createLogger();
 const store = createStore(rootReducer, applyMiddleware( ThunkMiddleware, logger ))
 const root = ReactDOM.createRoot(document.getElementById('root'));

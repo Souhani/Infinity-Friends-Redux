@@ -4,7 +4,7 @@ const SearchBox = ({ onSearchFieldChange }) => {
             <input 
               aria-label="search robots" 
               type="search"
-              placeholder="search robots" 
+              placeholder="search friends" 
               className="b--dark-blue bg-light-yellow pa2 input-reset ba  hover-bg-light-green hover-black"
               onChange={onSearchFieldChange} />
         </div>
