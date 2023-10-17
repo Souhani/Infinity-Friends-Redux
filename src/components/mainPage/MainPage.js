@@ -2,11 +2,11 @@ import CreateRobot from "../../containers/CreateRobot";
 import SearchBox from "../SearchBox";
 import Scroll from "../Scroll";
 import ErrorBoundry from "../ErrorBoundry";
-import CounterButton from "../CounterButton ";
+// import CounterButton from "../CounterButton ";
 import "./MainPage.css";
 import filterRobots from "../FilterRobots";
-import SelectAvatars_Connect from "../../containers/SelectAvatars_Connect";
-import Card_Connect from "../../containers/Card_Connect";
+import SelectAvatarsConnect from "../../containers/SelectAvatars_Connect";
+import CardConnect from "../../containers/Card_Connect";
 
 const MainPage = (props) => {
   let { onSearchFieldChange, searchField,
@@ -24,7 +24,7 @@ const MainPage = (props) => {
       if(!robots.length){
          return (<h1>No Friends 😔</h1>)
       }else{ 
-         return <Card_Connect filteredRobots={filterRobots(robots, searchField)} />
+         return <CardConnect filteredRobots={filterRobots(robots, searchField)} />
       };
    };
 
@@ -46,7 +46,7 @@ const MainPage = (props) => {
                   Delete All
             </button> 
             <div className="flex justify-center">
-               <SelectAvatars_Connect />
+               <SelectAvatarsConnect />
                <button className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib ml2"
                      onClick={onCreateRobotPage}>
                      Create Friends

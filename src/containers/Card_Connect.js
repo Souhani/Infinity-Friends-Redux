@@ -13,10 +13,10 @@ const mapDispatchToProps = (dispatch) => {
       onDeleteRobot: (robotNickname) => dispatch(deleteRobot(robotNickname)),
    }
 }
-const Card_Connect = (props) => {
+const CardConnect = (props) => {
       return (
       <Card {...props} />
         )
    }; 
 
-export default connect(mapStateToProps, mapDispatchToProps) (Card_Connect);
+export default connect(mapStateToProps, mapDispatchToProps) (CardConnect);

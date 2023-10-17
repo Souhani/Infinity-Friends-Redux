@@ -27,12 +27,13 @@ const mapDispatchToProps = (dispatch) => {
    }
 }
 const App = (props) => {
+   const {requestedRobots, onRequestRobots, onGetAllRobots} = props;
    useEffect(() => {
-      props.onRequestRobots();
-       }, []);
+      onRequestRobots();
+       },[onRequestRobots]);
       useEffect(() => {
-      props.onGetAllRobots([...props.requestedRobots]);
-         }, [props.requestedRobots]);
+      onGetAllRobots([...requestedRobots]);
+         }, [onGetAllRobots,requestedRobots]);
       return (
       <MainPage {...props} />
         )
