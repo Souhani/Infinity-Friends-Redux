@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Infinity-Friends/static/css/main.c8687e80.css",
+    "main.js": "/Infinity-Friends/static/js/main.fea6b8ae.js",
+    "static/js/787.4e65c3ff.chunk.js": "/Infinity-Friends/static/js/787.4e65c3ff.chunk.js",
+    "service-worker.js": "/Infinity-Friends/service-worker.js",
+    "index.html": "/Infinity-Friends/index.html",
+    "main.c8687e80.css.map": "/Infinity-Friends/static/css/main.c8687e80.css.map",
+    "main.fea6b8ae.js.map": "/Infinity-Friends/static/js/main.fea6b8ae.js.map",
+    "787.4e65c3ff.chunk.js.map": "/Infinity-Friends/static/js/787.4e65c3ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8687e80.css",
+    "static/js/main.fea6b8ae.js"
+  ]
+}
