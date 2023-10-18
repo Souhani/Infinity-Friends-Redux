@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Infinity-Friends/static/css/main.c8687e80.css",
-    "main.js": "/Infinity-Friends/static/js/main.fea6b8ae.js",
-    "static/js/787.4e65c3ff.chunk.js": "/Infinity-Friends/static/js/787.4e65c3ff.chunk.js",
-    "service-worker.js": "/Infinity-Friends/service-worker.js",
-    "index.html": "/Infinity-Friends/index.html",
-    "main.c8687e80.css.map": "/Infinity-Friends/static/css/main.c8687e80.css.map",
-    "main.fea6b8ae.js.map": "/Infinity-Friends/static/js/main.fea6b8ae.js.map",
-    "787.4e65c3ff.chunk.js.map": "/Infinity-Friends/static/js/787.4e65c3ff.chunk.js.map"
+    "main.css": "/Infinity-Friends-Redux/static/css/main.c8687e80.css",
+    "main.js": "/Infinity-Friends-Redux/static/js/main.18b33bb0.js",
+    "static/js/787.b2deab44.chunk.js": "/Infinity-Friends-Redux/static/js/787.b2deab44.chunk.js",
+    "service-worker.js": "/Infinity-Friends-Redux/service-worker.js",
+    "index.html": "/Infinity-Friends-Redux/index.html",
+    "main.c8687e80.css.map": "/Infinity-Friends-Redux/static/css/main.c8687e80.css.map",
+    "main.18b33bb0.js.map": "/Infinity-Friends-Redux/static/js/main.18b33bb0.js.map",
+    "787.b2deab44.chunk.js.map": "/Infinity-Friends-Redux/static/js/787.b2deab44.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8687e80.css",
-    "static/js/main.fea6b8ae.js"
+    "static/js/main.18b33bb0.js"
   ]
 }
