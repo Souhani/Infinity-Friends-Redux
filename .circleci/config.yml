@@ -20,7 +20,7 @@ jobs:
         name: "npm testing"
         command: "npm test"
 
-  say-hello:
+  sayHello:
     docker:
       - image: cimg/base:stable
     steps:
@@ -32,5 +32,7 @@ workflows:
   build-test-workflow:
     jobs:
       - build
-      - test
       - SayHello
+      - test:
+        requires:
+          - SayHello
