@@ -17,6 +17,9 @@ jobs:
     steps:
     - checkout
     - run:
+        name: "npm installing"
+        command: "npm install"
+    - run:
         name: "npm testing"
         command: "npm test"
 
