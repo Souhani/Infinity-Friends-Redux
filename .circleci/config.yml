@@ -33,6 +33,6 @@ workflows:
     jobs:
       - build
       - sayHello
-      -test:
+      - test:
         requires:
           - sayHello
