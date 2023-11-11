@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:18.18
+      - image: cimg/base:stable
     steps:
       - checkout
       - run:
@@ -13,7 +13,7 @@ jobs:
           command: "npm build"
   test:
     docker:
-      - image: circleci/node:18.18
+      - image: cimg/base:stable
     steps:
     - checkout
     - run:
