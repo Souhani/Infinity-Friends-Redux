@@ -3,7 +3,7 @@
 exports[`test MainPage component MainPage renders without crashing 1`] = `
 <div>
   <h1>
-    Infinity Robots
+    Infinity Friends
   </h1>
   <SearchBox
     onSearchFieldChange={[MockFunction]}
@@ -29,13 +29,13 @@ exports[`test MainPage component MainPage renders without crashing 1`] = `
       className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib ml2"
       onClick={[MockFunction]}
     >
-      Create Robots
+      Create Friends
     </button>
   </div>
   <Scroll>
     <ErrorBoundry>
       <h1>
-        No Robots
+        No Friends 😔
       </h1>
     </ErrorBoundry>
   </Scroll>
@@ -47,7 +47,7 @@ exports[`test MainPage component renders for create robots Page 1`] = `<Connect(
 exports[`test MainPage component renders for request Robots 1`] = `
 <div>
   <h1>
-    Infinity Robots
+    Infinity Friends
   </h1>
   <SearchBox
     onSearchFieldChange={[MockFunction]}
@@ -73,13 +73,13 @@ exports[`test MainPage component renders for request Robots 1`] = `
       className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib ml2"
       onClick={[MockFunction]}
     >
-      Create Robots
+      Create Friends
     </button>
   </div>
   <Scroll>
     <ErrorBoundry>
       <h1>
-        No Robots
+        No Friends 😔
       </h1>
     </ErrorBoundry>
   </Scroll>
@@ -89,7 +89,7 @@ exports[`test MainPage component renders for request Robots 1`] = `
 exports[`test MainPage component renders if there is robots 1`] = `
 <div>
   <h1>
-    Infinity Robots
+    Infinity Friends
   </h1>
   <SearchBox
     onSearchFieldChange={[MockFunction]}
@@ -115,12 +115,12 @@ exports[`test MainPage component renders if there is robots 1`] = `
       className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib ml2"
       onClick={[MockFunction]}
     >
-      Create Robots
+      Create Friends
     </button>
   </div>
   <Scroll>
     <ErrorBoundry>
-      <Connect(Card_Connect)
+      <Connect(CardConnect)
         filteredRobots={
           Array [
             Object {

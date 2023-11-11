@@ -24,12 +24,16 @@ exports[`testing card 1`] = `
     >
       Delete
     </button>
-    <img
-      alt="robot"
-      src="https://robohash.org/jhon1snow?set=undefined&size=100x100"
-    />
     <div
-      className="grow navy "
+      className="pa3"
+    >
+      <img
+        alt="robot"
+        src="https://robohash.org/jhon1snow?set=undefined&size=100x100"
+      />
+    </div>
+    <div
+      className="grow navy"
       style={
         Object {
           "cursor": "pointer",
