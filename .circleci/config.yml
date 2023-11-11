@@ -32,7 +32,7 @@ workflows:
   build-test-workflow:
     jobs:
       - build
-      - sayHello
+      - SayHello
       - test:
         requires:
-          - sayHello
+          - SayHello
