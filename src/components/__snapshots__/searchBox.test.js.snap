@@ -7,7 +7,7 @@ exports[`testing SearchBox 1`] = `
   <input
     aria-label="search robots"
     className="b--dark-blue bg-light-yellow pa2 input-reset ba  hover-bg-light-green hover-black"
-    placeholder="search robots"
+    placeholder="search friends"
     type="search"
   />
 </div>
